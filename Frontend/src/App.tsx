@@ -71,12 +71,12 @@ const getweather30s = async () =>{
     SetData(Res.data)
     SetName(Res.data.name)
     Id = Res.data.weather[0].id
-    toast.success("Loading weather!😑",{style: {
-      border: '1px solid #713200',
-      padding: '16px',
-      color: '#040D12',
-      background :'#D3C185'
-  }})
+  //   toast.success("Loading weather!😑",{style: {
+  //     border: '1px solid #713200',
+  //     padding: '16px',
+  //     color: '#040D12',
+  //     background :'#D3C185'
+  // }})
     console.log(Res.data.weather[0].id);
     console.log(Id);
     
@@ -106,12 +106,12 @@ setInterval(getweather30s,30000)
       SetData(Res.data)
       SetName(Res.data.name)
       Id = Res.data.weather[0].id
-    //   toast.success("Loading weather!😑",{style: {
-    //     border: '1px solid #713200',
-    //     padding: '16px',
-    //     color: '#040D12',
-    //     background :'#D3C185'
-    // }})
+      toast.success("Loading weather!😑",{style: {
+        border: '1px solid #713200',
+        padding: '16px',
+        color: '#040D12',
+        background :'#D3C185'
+    }})
       console.log(Res.data.weather[0].id);
       console.log(Id);
       
