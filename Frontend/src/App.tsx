@@ -64,7 +64,7 @@ const getweather30s = async () =>{
   console.log(ressss);
   try {
     
-    const Res = await axios.post('http://localhost:3000/api/weather',{
+    const Res = await axios.post('https://liveweatherwebsite.onrender.com/api/weather',{
       latitude : Location?.latitude,
       longitude : Location?.longitude
       })
@@ -99,7 +99,7 @@ setInterval(getweather30s,30000)
       try {
         
         SetLoading(true)
-        const Res = await axios.post('http://localhost:3000/api/weather',{
+        const Res = await axios.post('https://liveweatherwebsite.onrender.com/api/weather',{
         latitude : Location?.latitude,
         longitude : Location?.longitude
         })
@@ -116,7 +116,7 @@ setInterval(getweather30s,30000)
       console.log(Id);
       
       SetLoading(false)
-      //SetPopup(true)
+      SetPopup(false)
 
       } catch (error) {
         console.log(error);
