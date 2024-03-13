@@ -17,7 +17,7 @@ interface responseData {
 
 function App() {
 
-  const socket = io('http://localhost:8000')
+  const socket = io('https://liveweatherwebsite-1.onrender.com')
  
   const [Location,SetLocation] = useState<Location | null>(null)
   const [Data,SetData] = useState<responseData | null>(null)
@@ -106,12 +106,12 @@ setInterval(getweather30s,30000)
       SetData(Res.data)
       SetName(Res.data.name)
       Id = Res.data.weather[0].id
-      toast.success("Loading weather!😑",{style: {
-        border: '1px solid #713200',
-        padding: '16px',
-        color: '#040D12',
-        background :'#D3C185'
-    }})
+    //   toast.success("Loading weather!😑",{style: {
+    //     border: '1px solid #713200',
+    //     padding: '16px',
+    //     color: '#040D12',
+    //     background :'#D3C185'
+    // }})
       console.log(Res.data.weather[0].id);
       console.log(Id);
       
